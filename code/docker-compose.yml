@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  casaone-ps:
+    build:
+      context: .
+    ports: 
+      - 8080:8080
+    volumes: 
+      - ./:/app
+    entrypoint:
+      - npm
+      - start
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    
