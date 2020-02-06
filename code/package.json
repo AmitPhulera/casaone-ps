@@ -7,9 +7,11 @@
     "express": "^4.17.1",
     "mongoose": "^5.8.9"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
   "scripts": {
-    "start": "node index.js",
+    "start": "node_modules/.bin/nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

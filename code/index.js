@@ -10,7 +10,7 @@ app.use("/",routes);
 app.listen(PORT,async ()=>{
     await connectDB();
     console.log("DB connected");
-    console.log("Dev Server Started");
+    console.log(`Dev Server Started on port ${PORT}`);
 })
 
 async function connectDB(){
